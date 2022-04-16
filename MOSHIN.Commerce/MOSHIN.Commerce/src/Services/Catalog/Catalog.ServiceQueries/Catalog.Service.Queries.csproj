@@ -8,7 +8,7 @@
     <ProjectReference Include="..\..\Common\Service.Common.Collection\Service.Common.Collection.csproj" />
     <ProjectReference Include="..\..\Common\Service.Common.Mapping\Service.Common.Mapping.csproj" />
     <ProjectReference Include="..\..\Common\Service.Common.Paging\Service.Common.Paging.csproj" />
-    <ProjectReference Include="..\Catalog.PersistenceDatabase\Catalog.PersistenceDatabase.csproj" />
+    <ProjectReference Include="..\Catalog.PersistenceDatabase\Catalog.Persistence.Database.csproj" />
   </ItemGroup>
 
 </Project>

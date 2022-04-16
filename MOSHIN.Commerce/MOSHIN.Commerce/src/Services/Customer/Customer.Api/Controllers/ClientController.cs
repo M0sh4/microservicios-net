@@ -1,5 +1,6 @@
-﻿using Catalog.Service.EventHandlers.Commands;
-using Catalog.ServiceQueries;
+﻿using Customer.Service.EventHandlers.Commands;
+using Customer.Service.Queries;
+using Customer.Service.Queries.DTOs;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -9,18 +10,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Catalog.Api.Controllers
+namespace Customer.Api.Controllers
 {
     [ApiController]
-    [Route("products")]
-    public class ProductController : ControllerBase
+    [Route("clients")]
+    public class ClientController : ControllerBase
     {
 
-        private readonly ILogger<ProductController> _logger;
-        private readonly IProductQueryService _queryService;
+        private readonly ILogger<ClientController> _logger;
+        private readonly IClientQueryService _queryService;
         private readonly IMediator _mediator;
 
-        public ProductController(ILogger<ProductController> logger, IProductQueryService queryService, IMediator mediator)
+        public ClientController(ILogger<ClientController> logger, IClientQueryService queryService, IMediator mediator)
         {
             _logger = logger;
             _queryService = queryService;
@@ -28,7 +29,7 @@ namespace Catalog.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<DataCollection<ProductDto>> GetAll(int page = 1, int take = 10, string ids = null)
+        public async Task<DataCollection<ClientDto>> GetAll(int page = 1, int take = 10, string ids = null)
         {
             IEnumerable<int> products = null;
             if (!string.IsNullOrEmpty(ids))
@@ -40,13 +41,13 @@ namespace Catalog.Api.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ProductDto> Get(int id)
+        public async Task<ClientDto> Get(int id)
         {
             return await _queryService.GetAsync(id);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(ProductCreateCommand command)
+        public async Task<IActionResult> Create(ClientCreateCommand command)
         {
             await _mediator.Publish(command);
             return Ok();

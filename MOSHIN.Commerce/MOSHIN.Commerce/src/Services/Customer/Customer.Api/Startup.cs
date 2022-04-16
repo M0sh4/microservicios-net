@@ -1,6 +1,10 @@
+using Customer.Persistence.Database;
+using Customer.Service.Queries;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -8,9 +12,10 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
-namespace WebApplication1
+namespace Customer.Api
 {
     public class Startup
     {
@@ -25,6 +30,13 @@ namespace WebApplication1
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddDbContext<ApplicationDbContext>(opts =>
+                opts.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
+                x => x.MigrationsHistoryTable("_EFMigrationHistory", "Customer"))
+            );
+            services.AddTransient<IClientQueryService, ClientQueryService>();
+
+            services.AddMediatR(Assembly.Load("Customer.Service.EventHandlers"));
             services.AddControllers();
         }
 

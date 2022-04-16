@@ -1,19 +1,31 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AspNetCore.HealthChecks.UI" Version="5.0.0" />
+    <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="5.0.0" />
+    <PackageReference Include="AspNetCore.HealthChecks.UI.SQLite.Storage" Version="5.0.1" />
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.16">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="5.0.16" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Catalog.PersistenceDatabase\Catalog.PersistenceDatabase.csproj" />
-    <ProjectReference Include="..\Catalog.ServiceQueries\Catalog.ServiceQueries.csproj" />
+    <ProjectReference Include="..\..\Common\Common.Logging\Service.Common.Logging.csproj" />
+    <ProjectReference Include="..\Catalog.PersistenceDatabase\Catalog.Persistence.Database.csproj" />
+    <ProjectReference Include="..\Catalog.Service.EventHandlers\Catalog.Service.EventHandlers.csproj" />
+    <ProjectReference Include="..\Catalog.ServiceQueries\Catalog.Service.Queries.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="healthchecks\" />
   </ItemGroup>
 
 </Project>
