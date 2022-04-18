@@ -2,6 +2,8 @@
 using Customer.Service.Queries;
 using Customer.Service.Queries.DTOs;
 using MediatR;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Service.Common.Collection;

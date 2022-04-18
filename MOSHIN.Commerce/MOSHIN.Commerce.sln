@@ -51,7 +51,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service.Common.Logging", "M
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06. Testing", "06. Testing", "{D28F7121-3DB8-425F-8CC4-F97808C61C8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Tests", "MOSHIN.Commerce\src\Services\Catalog\Catalog.Tests\Catalog.Tests.csproj", "{F00B6984-22F9-4A1B-BCB7-0474A7D6ACE1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Tests", "MOSHIN.Commerce\src\Services\Catalog\Catalog.Tests\Catalog.Tests.csproj", "{F00B6984-22F9-4A1B-BCB7-0474A7D6ACE1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01. API", "01. API", "{C05EBC0E-982D-461E-99E7-E347ADA88FFF}"
 EndProject
@@ -63,17 +63,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04. Models", "04. Models", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05. Testing", "05. Testing", "{EECF50CB-4129-4BC4-92FD-F63A313730AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer.Api", "MOSHIN.Commerce\src\Services\Customer\Customer.Api\Customer.Api.csproj", "{764236BD-28B4-4360-8E1D-1926403ADE2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customer.Api", "MOSHIN.Commerce\src\Services\Customer\Customer.Api\Customer.Api.csproj", "{764236BD-28B4-4360-8E1D-1926403ADE2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer.Service.EventHandlers", "MOSHIN.Commerce\src\Services\Customer\Customer.Service.EventHandlers\Customer.Service.EventHandlers.csproj", "{68C8D534-2547-4E18-979D-A872916078E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customer.Service.EventHandlers", "MOSHIN.Commerce\src\Services\Customer\Customer.Service.EventHandlers\Customer.Service.EventHandlers.csproj", "{68C8D534-2547-4E18-979D-A872916078E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer.Service.Queries", "MOSHIN.Commerce\src\Services\Customer\Customer.Service.Queries\Customer.Service.Queries.csproj", "{39922D23-A38A-4286-BA46-7F555AA31B6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customer.Service.Queries", "MOSHIN.Commerce\src\Services\Customer\Customer.Service.Queries\Customer.Service.Queries.csproj", "{39922D23-A38A-4286-BA46-7F555AA31B6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer.Persistence.Database", "MOSHIN.Commerce\src\Services\Customer\Customer.Persistence.Database\Customer.Persistence.Database.csproj", "{2C586C53-FF0D-4BC8-B67E-5D4FD95BE55D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customer.Persistence.Database", "MOSHIN.Commerce\src\Services\Customer\Customer.Persistence.Database\Customer.Persistence.Database.csproj", "{2C586C53-FF0D-4BC8-B67E-5D4FD95BE55D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer.Domain", "MOSHIN.Commerce\src\Services\Customer\Customer.Domain\Customer.Domain.csproj", "{AF0F1BE9-51CA-48C8-8366-A3B425CB3C8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customer.Domain", "MOSHIN.Commerce\src\Services\Customer\Customer.Domain\Customer.Domain.csproj", "{AF0F1BE9-51CA-48C8-8366-A3B425CB3C8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer.Tests", "MOSHIN.Commerce\src\Services\Customer\Customer.Tests\Customer.Tests.csproj", "{D51008CE-2089-4233-9B5E-41AFDDFEC3C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customer.Tests", "MOSHIN.Commerce\src\Services\Customer\Customer.Tests\Customer.Tests.csproj", "{D51008CE-2089-4233-9B5E-41AFDDFEC3C7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01. API", "01. API", "{B651D440-0E03-43EF-A9D2-1E3CF2F0B840}"
 EndProject
@@ -85,13 +85,45 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04. Models", "04. Models", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05. Testing", "05. Testing", "{86846CFE-2115-4E0C-9047-39596733CB29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.Domain", "MOSHIN.Commerce\src\Services\Order\Order.Domain\Order.Domain.csproj", "{820A1009-8A2E-4C75-8444-F1F2D0BCABB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order.Domain", "MOSHIN.Commerce\src\Services\Order\Order.Domain\Order.Domain.csproj", "{820A1009-8A2E-4C75-8444-F1F2D0BCABB9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06. Common", "06. Common", "{DE80D1B7-DC2E-4D32-A2B2-BCAD040A6D32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.Persistence.Database", "MOSHIN.Commerce\src\Services\Order\Order.Persistence.Database\Order.Persistence.Database.csproj", "{2CCE5B3B-1333-44BB-8422-83DA74E022BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order.Persistence.Database", "MOSHIN.Commerce\src\Services\Order\Order.Persistence.Database\Order.Persistence.Database.csproj", "{2CCE5B3B-1333-44BB-8422-83DA74E022BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.Common", "MOSHIN.Commerce\src\Services\Order\Order.Common\Order.Common.csproj", "{E107C14E-C878-4E89-969A-49629D0229CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order.Common", "MOSHIN.Commerce\src\Services\Order\Order.Common\Order.Common.csproj", "{E107C14E-C878-4E89-969A-49629D0229CD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order.Api", "MOSHIN.Commerce\src\Services\Order\Order.Api\Order.Api.csproj", "{93934F0F-2833-40EC-8D87-98146F385BD2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order.Service.EventHandlers", "MOSHIN.Commerce\src\Services\Order\Order.Service.EventHandlers\Order.Service.EventHandlers.csproj", "{3AAB5430-C586-4C49-B281-2D0087D5E7B3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order.Service.Queries", "MOSHIN.Commerce\src\Services\Order\Order.Service.Queries\Order.Service.Queries.csproj", "{EF1C0E02-9AE9-48A4-AA16-D09CC763AA58}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order.Service.Proxies", "MOSHIN.Commerce\src\Services\Order\Order.Service.Proxy\Order.Service.Proxies.csproj", "{7779E280-660B-40C4-A195-E216927F0E73}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01. API", "01. API", "{0B6196D9-C245-44A7-8390-62697A22A475}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02. Services", "02. Services", "{BD791D74-04CA-4182-9E9A-DC4C52DDB10E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03. Persistence", "03. Persistence", "{70DDE87C-CA18-4004-A319-93B0E3020C0C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04.Models", "04.Models", "{C7E6C17B-524E-4B26-8810-B568511C9A46}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05.Testing", "05.Testing", "{BE692CD3-77CF-47CA-840F-7D40C2F9A765}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.Api", "MOSHIN.Commerce\src\Services\Identity\Identity.Api\Identity.Api.csproj", "{071B9098-9702-4BCF-868A-CDD2C59D2CE7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.Service.EventHandlers", "MOSHIN.Commerce\src\Services\Identity\Identity.Service.EventHandler\Identity.Service.EventHandlers.csproj", "{5E0EA269-25E6-404E-BF49-9E99A0658A5F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.Service.Queries", "MOSHIN.Commerce\src\Services\Identity\Identity.Service.Queries\Identity.Service.Queries.csproj", "{36449D6E-C530-4961-A002-420B10CBA768}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.Persistence.Database", "MOSHIN.Commerce\src\Services\Identity\Identity.Persistence.Database\Identity.Persistence.Database.csproj", "{DAA79147-460C-4E0C-9AD3-C70C76E0D385}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.Domain", "MOSHIN.Commerce\src\Services\Identity\Identity.Domain\Identity.Domain.csproj", "{08484F06-64E1-4D1A-8CD7-AF1C632EC08D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIs", "APIs", "{FF3AAAE2-AE50-4402-8C83-DDB7C29F689D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Gateway.WebClient", "MOSHIN.Commerce\src\Gateways\Api.Gateway.WebClient\Api.Gateway.WebClient.csproj", "{617D4EAF-8F41-45A3-819B-578A0BC96149}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -179,6 +211,46 @@ Global
 		{E107C14E-C878-4E89-969A-49629D0229CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E107C14E-C878-4E89-969A-49629D0229CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E107C14E-C878-4E89-969A-49629D0229CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93934F0F-2833-40EC-8D87-98146F385BD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93934F0F-2833-40EC-8D87-98146F385BD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93934F0F-2833-40EC-8D87-98146F385BD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93934F0F-2833-40EC-8D87-98146F385BD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AAB5430-C586-4C49-B281-2D0087D5E7B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AAB5430-C586-4C49-B281-2D0087D5E7B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AAB5430-C586-4C49-B281-2D0087D5E7B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AAB5430-C586-4C49-B281-2D0087D5E7B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF1C0E02-9AE9-48A4-AA16-D09CC763AA58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF1C0E02-9AE9-48A4-AA16-D09CC763AA58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF1C0E02-9AE9-48A4-AA16-D09CC763AA58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF1C0E02-9AE9-48A4-AA16-D09CC763AA58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7779E280-660B-40C4-A195-E216927F0E73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7779E280-660B-40C4-A195-E216927F0E73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7779E280-660B-40C4-A195-E216927F0E73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7779E280-660B-40C4-A195-E216927F0E73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{071B9098-9702-4BCF-868A-CDD2C59D2CE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{071B9098-9702-4BCF-868A-CDD2C59D2CE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{071B9098-9702-4BCF-868A-CDD2C59D2CE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{071B9098-9702-4BCF-868A-CDD2C59D2CE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E0EA269-25E6-404E-BF49-9E99A0658A5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E0EA269-25E6-404E-BF49-9E99A0658A5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E0EA269-25E6-404E-BF49-9E99A0658A5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E0EA269-25E6-404E-BF49-9E99A0658A5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36449D6E-C530-4961-A002-420B10CBA768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36449D6E-C530-4961-A002-420B10CBA768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36449D6E-C530-4961-A002-420B10CBA768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36449D6E-C530-4961-A002-420B10CBA768}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAA79147-460C-4E0C-9AD3-C70C76E0D385}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAA79147-460C-4E0C-9AD3-C70C76E0D385}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAA79147-460C-4E0C-9AD3-C70C76E0D385}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAA79147-460C-4E0C-9AD3-C70C76E0D385}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08484F06-64E1-4D1A-8CD7-AF1C632EC08D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08484F06-64E1-4D1A-8CD7-AF1C632EC08D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08484F06-64E1-4D1A-8CD7-AF1C632EC08D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08484F06-64E1-4D1A-8CD7-AF1C632EC08D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{617D4EAF-8F41-45A3-819B-578A0BC96149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{617D4EAF-8F41-45A3-819B-578A0BC96149}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{617D4EAF-8F41-45A3-819B-578A0BC96149}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{617D4EAF-8F41-45A3-819B-578A0BC96149}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -226,6 +298,22 @@ Global
 		{DE80D1B7-DC2E-4D32-A2B2-BCAD040A6D32} = {0692E18F-1C49-44CE-AF65-1DEA2D932DD1}
 		{2CCE5B3B-1333-44BB-8422-83DA74E022BD} = {F21A83EC-8182-46A1-B713-41687B02AF34}
 		{E107C14E-C878-4E89-969A-49629D0229CD} = {DE80D1B7-DC2E-4D32-A2B2-BCAD040A6D32}
+		{93934F0F-2833-40EC-8D87-98146F385BD2} = {B651D440-0E03-43EF-A9D2-1E3CF2F0B840}
+		{3AAB5430-C586-4C49-B281-2D0087D5E7B3} = {B586B729-F408-46CE-A961-E6BCF85DDF91}
+		{EF1C0E02-9AE9-48A4-AA16-D09CC763AA58} = {B586B729-F408-46CE-A961-E6BCF85DDF91}
+		{7779E280-660B-40C4-A195-E216927F0E73} = {B586B729-F408-46CE-A961-E6BCF85DDF91}
+		{0B6196D9-C245-44A7-8390-62697A22A475} = {508DB4DA-5B39-420C-9533-8511E99D0DFD}
+		{BD791D74-04CA-4182-9E9A-DC4C52DDB10E} = {508DB4DA-5B39-420C-9533-8511E99D0DFD}
+		{70DDE87C-CA18-4004-A319-93B0E3020C0C} = {508DB4DA-5B39-420C-9533-8511E99D0DFD}
+		{C7E6C17B-524E-4B26-8810-B568511C9A46} = {508DB4DA-5B39-420C-9533-8511E99D0DFD}
+		{BE692CD3-77CF-47CA-840F-7D40C2F9A765} = {508DB4DA-5B39-420C-9533-8511E99D0DFD}
+		{071B9098-9702-4BCF-868A-CDD2C59D2CE7} = {0B6196D9-C245-44A7-8390-62697A22A475}
+		{5E0EA269-25E6-404E-BF49-9E99A0658A5F} = {BD791D74-04CA-4182-9E9A-DC4C52DDB10E}
+		{36449D6E-C530-4961-A002-420B10CBA768} = {BD791D74-04CA-4182-9E9A-DC4C52DDB10E}
+		{DAA79147-460C-4E0C-9AD3-C70C76E0D385} = {70DDE87C-CA18-4004-A319-93B0E3020C0C}
+		{08484F06-64E1-4D1A-8CD7-AF1C632EC08D} = {C7E6C17B-524E-4B26-8810-B568511C9A46}
+		{FF3AAAE2-AE50-4402-8C83-DDB7C29F689D} = {6E2B4764-C731-4AD9-A2E7-AC7E32C08280}
+		{617D4EAF-8F41-45A3-819B-578A0BC96149} = {FF3AAAE2-AE50-4402-8C83-DDB7C29F689D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {33210F0C-0849-4220-918C-DABF50E0D5B1}

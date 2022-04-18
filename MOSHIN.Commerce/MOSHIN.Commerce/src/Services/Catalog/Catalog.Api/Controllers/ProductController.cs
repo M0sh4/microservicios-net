@@ -1,6 +1,8 @@
 ﻿using Catalog.Service.EventHandlers.Commands;
 using Catalog.ServiceQueries;
 using MediatR;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Service.Common.Collection;

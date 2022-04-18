@@ -5,7 +5,7 @@ using static Order.Common.Enums;
 
 namespace Order.Domain
 {
-    public class Order
+    public class OrderEntity
     {
         public int OrderId { get; set; }
         public OrderStatus Status { get; set; }
