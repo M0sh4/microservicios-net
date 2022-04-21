@@ -123,7 +123,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.Domain", "MOSHIN.C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIs", "APIs", "{FF3AAAE2-AE50-4402-8C83-DDB7C29F689D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Gateway.WebClient", "MOSHIN.Commerce\src\Gateways\Api.Gateway.WebClient\Api.Gateway.WebClient.csproj", "{617D4EAF-8F41-45A3-819B-578A0BC96149}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Gateway.WebClient", "MOSHIN.Commerce\src\Gateways\Api.Gateway.WebClient\Api.Gateway.WebClient.csproj", "{617D4EAF-8F41-45A3-819B-578A0BC96149}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kubernetes", "Kubernetes", "{04DE219E-F32B-49E4-B92B-4DDC295F730F}"
+	ProjectSection(SolutionItems) = preProject
+		microservice-identity-deploy.yaml = microservice-identity-deploy.yaml
+		microservice-identity-pod.yaml = microservice-identity-pod.yaml
+		sqlserver-pod.yaml = sqlserver-pod.yaml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
