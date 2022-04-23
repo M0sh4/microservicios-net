@@ -5,8 +5,8 @@
       "UpstreamHttpMethod": [],
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 53208
+          "Host": "microservice-identity-service",//localhost
+          "Port": "80"//53208
         }
       ],
       "DownstreamPathTemplate": "/{path}"
@@ -16,8 +16,8 @@
       "UpstreamHttpMethod": [],
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 20000
+          "Host": "microservice-catalog-service",//localhost
+          "Port": "80"//20000
         }
       ],
       "DownstreamPathTemplate": "/{path}",
@@ -30,8 +30,8 @@
       "UpstreamHttpMethod": [],
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 56143
+          "Host": "microservice-customer-service",//localhost
+          "Port": "80"//56143
         }
       ],
       "DownstreamPathTemplate": "/{path}",
@@ -44,8 +44,8 @@
       "UpstreamHttpMethod": [],
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 39536
+          "Host": "microservice-order-service",//localhost
+          "Port": "80"//39536
         }
       ],
       "DownstreamPathTemplate": "/{path}",
@@ -62,6 +62,6 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:14248"
+    "BaseUrl": "microservice-gateway-webclient-service" //http://localhost:14248
   }
 }

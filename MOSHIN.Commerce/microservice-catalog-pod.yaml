@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: microservice-catalog-pod
+  labels:
+    app: microservice-catalog
+    type: microservice
+spec:
+  container:
+    - name: microservice-catalog
+      image: m0sh1n/catalogapi:latest
+      ports:
+      - containerPort: 80
+      env:
+        - name: ConnectionStrings__DefaultConnection
+          value: Server=mssql-service;Database=MoshinEcommerce;User=sa;Password=$VaxiDrez2025
+        - name: serverAPI__host
+          value: microservice-catalog-service

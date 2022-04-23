@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservice-gateway-webclient-deploy
+  labels:
+    name: microservice-gateway-webclient-deploy
+    app: microservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: microservice-gateway-webclient
+      type: microservice
+  template:
+    metadata: 
+      name: microservice-gateway-webclient-pod
+      labels:
+        app: microservice-gateway-webclient
+        type: microservice
+    spec:
+      containers:
+        - name: microservice-gateway-webclient
+          image: m0sh1n/apigatewaywebclient:latest
+          ports:
+          - containerPort: 80
+          env:
+            - name: ConnectionStrings__DefaultConnection
+              value: Server=mssql-service;Database=MoshinEcommerce;User=sa;Password=$VaxiDrez2025
+            - name: serverAPI__host
+              value: microservice-gateway-webclient-service

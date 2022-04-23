@@ -126,10 +126,49 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Gateway.WebClient", "MOSHIN.Commerce\src\Gateways\Api.Gateway.WebClient\Api.Gateway.WebClient.csproj", "{617D4EAF-8F41-45A3-819B-578A0BC96149}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kubernetes", "Kubernetes", "{04DE219E-F32B-49E4-B92B-4DDC295F730F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{1EE1D05D-A409-4CEA-B79B-3B93FFE0DB7D}"
 	ProjectSection(SolutionItems) = preProject
 		microservice-identity-deploy.yaml = microservice-identity-deploy.yaml
-		microservice-identity-pod.yaml = microservice-identity-pod.yaml
+		microservice-identity-pod.yml = microservice-identity-pod.yml
+		microservice-identity-service.yaml = microservice-identity-service.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SqlServer", "SqlServer", "{8A1C76F2-FFD4-4DE3-B207-76224EE3F281}"
+	ProjectSection(SolutionItems) = preProject
+		sqlserver-deploy.yaml = sqlserver-deploy.yaml
 		sqlserver-pod.yaml = sqlserver-pod.yaml
+		sqlserver-service.yaml = sqlserver-service.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{F3DE7B06-E5FE-4FCA-9639-8F8D9D3D9A83}"
+	ProjectSection(SolutionItems) = preProject
+		microservice-catalog-deploy.yaml = microservice-catalog-deploy.yaml
+		microservice-catalog-pod.yaml = microservice-catalog-pod.yaml
+		microservice-catalog-service.yaml = microservice-catalog-service.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Customer", "Customer", "{639E4411-339F-4D20-AE89-5C90774EE5A4}"
+	ProjectSection(SolutionItems) = preProject
+		microservice-customer-deploy.yaml = microservice-customer-deploy.yaml
+		microservice-customer-pod.yaml = microservice-customer-pod.yaml
+		microservice-customer-service.yaml = microservice-customer-service.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Order", "Order", "{B2BB216B-D900-417A-B28F-6142D850C4CC}"
+	ProjectSection(SolutionItems) = preProject
+		microservice-order-deploy.yaml = microservice-order-deploy.yaml
+		microservice-order-pod.yaml = microservice-order-pod.yaml
+		microservice-order-service.yaml = microservice-order-service.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{E77B8A06-C9DF-4065-A85C-640BD323BCB0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebClient", "WebClient", "{C300890C-703C-43DE-8593-6AF6FECD75DD}"
+	ProjectSection(SolutionItems) = preProject
+		microservice-gategay-webclient-pod.yaml = microservice-gategay-webclient-pod.yaml
+		microservice-gateway-webclient-deploy.yaml = microservice-gateway-webclient-deploy.yaml
+		microservice-gateway-webclient-service.yaml = microservice-gateway-webclient-service.yaml
 	EndProjectSection
 EndProject
 Global
@@ -321,6 +360,13 @@ Global
 		{08484F06-64E1-4D1A-8CD7-AF1C632EC08D} = {C7E6C17B-524E-4B26-8810-B568511C9A46}
 		{FF3AAAE2-AE50-4402-8C83-DDB7C29F689D} = {6E2B4764-C731-4AD9-A2E7-AC7E32C08280}
 		{617D4EAF-8F41-45A3-819B-578A0BC96149} = {FF3AAAE2-AE50-4402-8C83-DDB7C29F689D}
+		{1EE1D05D-A409-4CEA-B79B-3B93FFE0DB7D} = {04DE219E-F32B-49E4-B92B-4DDC295F730F}
+		{8A1C76F2-FFD4-4DE3-B207-76224EE3F281} = {1EE1D05D-A409-4CEA-B79B-3B93FFE0DB7D}
+		{F3DE7B06-E5FE-4FCA-9639-8F8D9D3D9A83} = {04DE219E-F32B-49E4-B92B-4DDC295F730F}
+		{639E4411-339F-4D20-AE89-5C90774EE5A4} = {04DE219E-F32B-49E4-B92B-4DDC295F730F}
+		{B2BB216B-D900-417A-B28F-6142D850C4CC} = {04DE219E-F32B-49E4-B92B-4DDC295F730F}
+		{E77B8A06-C9DF-4065-A85C-640BD323BCB0} = {04DE219E-F32B-49E4-B92B-4DDC295F730F}
+		{C300890C-703C-43DE-8593-6AF6FECD75DD} = {E77B8A06-C9DF-4065-A85C-640BD323BCB0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {33210F0C-0849-4220-918C-DABF50E0D5B1}

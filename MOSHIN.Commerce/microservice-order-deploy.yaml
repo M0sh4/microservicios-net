@@ -1,26 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: microservice-identity-deploy
+  name: microservice-order-deploy
   labels:
-    name: microservice-identity-deploy
+    name: microservice-order-deploy
     app: microservice
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: microservice-identity
+      app: microservice-order
       type: microservice
   template:
     metadata: 
-      name: microservice-identity-pod
+      name: microservice-order-pod
       labels:
-        app: microservice-identity
+        app: microservice-order
         type: microservice
     spec:
       containers:
-        - name: microservice-identity
-          image: m0sh1n/identityapi:latest
+        - name: microservice-order
+          image: m0sh1n/orderapi:latest
           ports:
           - containerPort: 80
           env:

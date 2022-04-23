@@ -45,10 +45,10 @@ namespace Catalog.Api
                 .AddDbContextCheck<ApplicationDbContext>();
             services.AddHealthChecksUI(s =>
             {
-                s.AddHealthCheckEndpoint("endpoint1", "http://localhost:20000/hc");
+                s.AddHealthCheckEndpoint("endpoint1", "http://"+Configuration.GetSection("serverAPI:host").Value+ "/api/msc//hc");
             })
                 .AddSqliteStorage("Data Source = healthchecks\\healthchecks.db");
-
+            //Configuration.GetSection("serverAPI:host").Value + 
             services.AddMediatR(Assembly.Load("Catalog.Service.EventHandlers"));
             services.AddTransient<IProductQueryService, ProductQueryService>();
             services.AddControllers();

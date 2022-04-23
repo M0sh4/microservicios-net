@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: microservice-identity-pod
+  labels:
+    app: microservice-identity
+    type: microservice
+spec:
+  container:
+    - name: microservice-identity
+      image: m0sh1n/identityapi:latest
+      ports:
+      - containerPort: 80
+      env:
+        - name: ConnectionStrings__DefaultConnection
+          value: Server=mssql-service;Database=MoshinEcommerce;User=sa;Password=$VaxiDrez2025
