@@ -6,19 +6,32 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["MOSHIN.Commerce/src/Services/Customer/Customer.Api/Customer.Api.csproj", "MOSHIN.Commerce/src/Services/Customer/Customer.Api/"]
-COPY ["MOSHIN.Commerce/src/Services/Customer/Customer.Service.EventHandlers/Customer.Service.EventHandlers.csproj", "MOSHIN.Commerce/src/Services/Customer/Customer.Service.EventHandlers/"]
-COPY ["MOSHIN.Commerce/src/Services/Customer/Customer.Persistence.Database/Customer.Persistence.Database.csproj", "MOSHIN.Commerce/src/Services/Customer/Customer.Persistence.Database/"]
-COPY ["MOSHIN.Commerce/src/Services/Customer/Customer.Domain/Customer.Domain.csproj", "MOSHIN.Commerce/src/Services/Customer/Customer.Domain/"]
-COPY ["MOSHIN.Commerce/src/Services/Catalog/Catalog.PersistenceDatabase/Catalog.Persistence.Database.csproj", "MOSHIN.Commerce/src/Services/Catalog/Catalog.PersistenceDatabase/"]
-COPY ["MOSHIN.Commerce/src/Services/Catalog/Catalog.Domain/Catalog.Domain.csproj", "MOSHIN.Commerce/src/Services/Catalog/Catalog.Domain/"]
-COPY ["MOSHIN.Commerce/src/Services/Customer/Customer.Service.Queries/Customer.Service.Queries.csproj", "MOSHIN.Commerce/src/Services/Customer/Customer.Service.Queries/"]
-COPY ["MOSHIN.Commerce/src/Services/Common/Service.Common.Collection/Service.Common.Collection.csproj", "MOSHIN.Commerce/src/Services/Common/Service.Common.Collection/"]
-COPY ["MOSHIN.Commerce/src/Services/Common/Service.Common.Mapping/Service.Common.Mapping.csproj", "MOSHIN.Commerce/src/Services/Common/Service.Common.Mapping/"]
-COPY ["MOSHIN.Commerce/src/Services/Common/Service.Common.Paging/Service.Common.Paging.csproj", "MOSHIN.Commerce/src/Services/Common/Service.Common.Paging/"]
-RUN dotnet restore "MOSHIN.Commerce/src/Services/Customer/Customer.Api/Customer.Api.csproj"
+#COPY ["MOSHIN.Commerce/src/Services/Customer/Customer.Api/Customer.Api.csproj", "MOSHIN.Commerce/src/Services/Customer/Customer.Api/"]
+COPY ["Customer.Api.csproj", "./"]
+#COPY ["MOSHIN.Commerce/src/Services/Customer/Customer.Service.EventHandlers/Customer.Service.EventHandlers.csproj", "MOSHIN.Commerce/src/Services/Customer/Customer.Service.EventHandlers/"]
+COPY ["Customer.Service.EventHandlers.csproj", "./"]
+#COPY ["MOSHIN.Commerce/src/Services/Customer/Customer.Persistence.Database/Customer.Persistence.Database.csproj", "MOSHIN.Commerce/src/Services/Customer/Customer.Persistence.Database/"]
+COPY ["Customer.Persistence.Database.csproj", "./"]
+#COPY ["MOSHIN.Commerce/src/Services/Customer/Customer.Domain/Customer.Domain.csproj", "MOSHIN.Commerce/src/Services/Customer/Customer.Domain/"]
+COPY ["Customer.Domain.csproj", "./"]
+#COPY ["MOSHIN.Commerce/src/Services/Catalog/Catalog.PersistenceDatabase/Catalog.Persistence.Database.csproj", "MOSHIN.Commerce/src/Services/Catalog/Catalog.PersistenceDatabase/"]
+COPY ["Catalog.Persistence.Database.csproj", "./"]
+#COPY ["MOSHIN.Commerce/src/Services/Catalog/Catalog.Domain/Catalog.Domain.csproj", "MOSHIN.Commerce/src/Services/Catalog/Catalog.Domain/"]
+COPY ["Catalog.Domain.csproj", "./"]
+#COPY ["MOSHIN.Commerce/src/Services/Customer/Customer.Service.Queries/Customer.Service.Queries.csproj", "MOSHIN.Commerce/src/Services/Customer/Customer.Service.Queries/"]
+COPY ["Customer.Service.Queries.csproj", "./"]
+#COPY ["MOSHIN.Commerce/src/Services/Common/Service.Common.Collection/Service.Common.Collection.csproj", "MOSHIN.Commerce/src/Services/Common/Service.Common.Collection/"]
+COPY ["Service.Common.Collection.csproj", "./"]
+#COPY ["MOSHIN.Commerce/src/Services/Common/Service.Common.Mapping/Service.Common.Mapping.csproj", "MOSHIN.Commerce/src/Services/Common/Service.Common.Mapping/"]
+COPY ["Service.Common.Mapping.csproj", "./"]
+#COPY ["MOSHIN.Commerce/src/Services/Common/Service.Common.Paging/Service.Common.Paging.csproj", "MOSHIN.Commerce/src/Services/Common/Service.Common.Paging/"]
+COPY ["Service.Common.Paging.csproj", "./"]
+#RUN dotnet restore "MOSHIN.Commerce/src/Services/Customer/Customer.Api/Customer.Api.csproj"
+RUN dotnet restore "Customer.Api.csproj"
+
 COPY . .
-WORKDIR "/src/MOSHIN.Commerce/src/Services/Customer/Customer.Api"
+#WORKDIR "/src/MOSHIN.Commerce/src/Services/Customer/Customer.Api"
+WORKDIR "/src"
 RUN dotnet build "Customer.Api.csproj" -c Release -o /app/build
 
 FROM build AS publish
