@@ -7,7 +7,7 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 #COPY ["MOSHIN.Commerce/src/Services/Order/Order.Api/Order.Api.csproj", "MOSHIN.Commerce/src/Services/Order/Order.Api/"]
-COPY ["src/Order.Api.csproj", "./"]
+COPY ["./Order.Api.csproj", "./"]
 #COPY ["MOSHIN.Commerce/src/Services/Order/Order.Persistence.Database/Order.Persistence.Database.csproj", "MOSHIN.Commerce/src/Services/Order/Order.Persistence.Database/"]
 COPY ["Order.Persistence.Database.csproj", "./"]
 #COPY ["MOSHIN.Commerce/src/Services/Order/Order.Domain/Order.Domain.csproj", "MOSHIN.Commerce/src/Services/Order/Order.Domain/"]
