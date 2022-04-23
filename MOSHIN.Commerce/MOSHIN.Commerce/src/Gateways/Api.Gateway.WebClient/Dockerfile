@@ -6,10 +6,14 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["MOSHIN.Commerce/src/Gateways/Api.Gateway.WebClient/Api.Gateway.WebClient.csproj", "MOSHIN.Commerce/src/Gateways/Api.Gateway.WebClient/"]
-RUN dotnet restore "MOSHIN.Commerce/src/Gateways/Api.Gateway.WebClient/Api.Gateway.WebClient.csproj"
+#COPY ["MOSHIN.Commerce/src/Gateways/Api.Gateway.WebClient/Api.Gateway.WebClient.csproj", "MOSHIN.Commerce/src/Gateways/Api.Gateway.WebClient/"]
+COPY ["Api.Gateway.WebClient.csproj", "./"]
+#RUN dotnet restore "MOSHIN.Commerce/src/Gateways/Api.Gateway.WebClient/Api.Gateway.WebClient.csproj"
+RUN dotnet restore "Api.Gateway.WebClient.csproj"
+
 COPY . .
-WORKDIR "/src/MOSHIN.Commerce/src/Gateways/Api.Gateway.WebClient"
+#WORKDIR "/src/MOSHIN.Commerce/src/Gateways/Api.Gateway.WebClient"
+WORKDIR "/src"
 RUN dotnet build "Api.Gateway.WebClient.csproj" -c Release -o /app/build
 
 FROM build AS publish
