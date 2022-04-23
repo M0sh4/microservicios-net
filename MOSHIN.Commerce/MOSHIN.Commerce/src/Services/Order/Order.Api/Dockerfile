@@ -6,8 +6,6 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-#COPY ["MOSHIN.Commerce/src/Services/Order/Order.Api/Order.Api.csproj", "MOSHIN.Commerce/src/Services/Order/Order.Api/"]
-COPY ["Order.Api.csproj", "./"]
 #COPY ["MOSHIN.Commerce/src/Services/Order/Order.Persistence.Database/Order.Persistence.Database.csproj", "MOSHIN.Commerce/src/Services/Order/Order.Persistence.Database/"]
 COPY ["Order.Persistence.Database.csproj", "./"]
 #COPY ["MOSHIN.Commerce/src/Services/Order/Order.Domain/Order.Domain.csproj", "MOSHIN.Commerce/src/Services/Order/Order.Domain/"]
@@ -30,6 +28,8 @@ COPY ["Service.Common.Paging.csproj", "./"]
 COPY ["Order.Service.Proxies.csproj", "./"]
 #COPY ["MOSHIN.Commerce/src/Services/Order/Order.Service.EventHandlers/Order.Service.EventHandlers.csproj", "MOSHIN.Commerce/src/Services/Order/Order.Service.EventHandlers/"]
 COPY ["Order.Service.EventHandlers.csproj", "./"]
+#COPY ["MOSHIN.Commerce/src/Services/Order/Order.Api/Order.Api.csproj", "MOSHIN.Commerce/src/Services/Order/Order.Api/"]
+COPY ["Order.Api.csproj", "./"]
 #RUN dotnet restore "MOSHIN.Commerce/src/Services/Order/Order.Api/Order.Api.csproj"
 RUN dotnet restore "Order.Api.csproj"
 
