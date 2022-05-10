@@ -27,4 +27,4 @@ spec:
             - name: ConnectionStrings__DefaultConnection
               value: Server=mssql-service;Database=MoshinEcommerce;User=sa;Password=$VaxiDrez2025
             - name: serverAPI__host
-              value: microservice-catalog-service
+              value: microservice-gateway-webclient-service
