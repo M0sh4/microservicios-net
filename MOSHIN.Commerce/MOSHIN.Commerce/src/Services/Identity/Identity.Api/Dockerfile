@@ -9,7 +9,7 @@ WORKDIR /src
 #COPY ["MOSHIN.Commerce/src/Services/Identity/Identity.Api/Identity.Api.csproj", "MOSHIN.Commerce/src/Services/Identity/Identity.Api/"]
 COPY ["Identity.Api.csproj", "./"]
 #COPY ["MOSHIN.Commerce/src/Services/Identity/Identity.Service.EventHandler/Identity.Service.EventHandlers.csproj", "MOSHIN.Commerce/src/Services/Identity/Identity.Service.EventHandler/"]
-COPY ["Identity.Service.EventHandler/Identity.Service.EventHandlers.csproj", "./"]
+COPY ["MOSHIN.Commerce/src/Services/Identity/Identity.Service.EventHandler/Identity.Service.EventHandlers.csproj", "./"]
 #COPY ["MOSHIN.Commerce/src/Services/Identity/Identity.Domain/Identity.Domain.csproj", "MOSHIN.Commerce/src/Services/Identity/Identity.Domain/"]
 COPY ["Identity.Domain.csproj", "./"]
 #COPY ["MOSHIN.Commerce/src/Services/Identity/Identity.Persistence.Database/Identity.Persistence.Database.csproj", "MOSHIN.Commerce/src/Services/Identity/Identity.Persistence.Database/"]
