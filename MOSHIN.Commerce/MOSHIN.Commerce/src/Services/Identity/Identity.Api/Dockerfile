@@ -21,12 +21,12 @@ RUN dotnet restore "MOSHIN.Commerce/src/Services/Identity/Identity.Api/Identity.
 COPY . .
 #WORKDIR "/src/MOSHIN.Commerce/src/Services/Identity/Identity.Api"
 WORKDIR "/src"
-RUN dotnet build "Identity.Api.csproj" -c Release -o /app/build
+RUN dotnet build "MOSHIN.Commerce/src/Services/Identity/Identity.Api.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "Identity.Api.csproj" -c Release -o /app/publish
+RUN dotnet publish "MOSHIN.Commerce/src/Services/Identity/Identity.Api.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Identity.Api.dll"]
+ENTRYPOINT ["dotnet", "MOSHIN.Commerce/src/Services/Identity/Identity.Api.dll"]
