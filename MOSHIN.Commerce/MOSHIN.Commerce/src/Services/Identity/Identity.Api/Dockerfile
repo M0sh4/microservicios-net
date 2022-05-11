@@ -9,11 +9,11 @@ WORKDIR /src
 #COPY ["MOSHIN.Commerce/src/Services/Identity/Identity.Api/Identity.Api.csproj", "MOSHIN.Commerce/src/Services/Identity/Identity.Api/"]
 COPY ["Identity.Api/Identity.Api.csproj", "./"]
 #COPY ["MOSHIN.Commerce/src/Services/Identity/Identity.Service.EventHandler/Identity.Service.EventHandlers.csproj", "MOSHIN.Commerce/src/Services/Identity/Identity.Service.EventHandler/"]
-COPY ["Identity.Service.EventHandler/Identity.Service.EventHandlers.csproj", "./"]
+COPY ["Identity.Service.EventHandler/Identity.Service.EventHandlers.csproj", "Identity.Service.EventHandler/"]
 #COPY ["MOSHIN.Commerce/src/Services/Identity/Identity.Domain/Identity.Domain.csproj", "MOSHIN.Commerce/src/Services/Identity/Identity.Domain/"]
-COPY ["Identity.Domain/Identity.Domain.csproj", "./"]
+COPY ["Identity.Domain/Identity.Domain.csproj", "Identity.Domain/"]
 #COPY ["MOSHIN.Commerce/src/Services/Identity/Identity.Persistence.Database/Identity.Persistence.Database.csproj", "MOSHIN.Commerce/src/Services/Identity/Identity.Persistence.Database/"]
-COPY ["Identity.Persistence.Database/Identity.Persistence.Database.csproj", "./"]
+COPY ["Identity.Persistence.Database/Identity.Persistence.Database.csproj", "Identity.Persistence.Database/"]
 
 #RUN dotnet restore "MOSHIN.Commerce/src/Services/Identity/Identity.Api/Identity.Api.csproj"
 RUN dotnet restore "Identity.Api.csproj"
