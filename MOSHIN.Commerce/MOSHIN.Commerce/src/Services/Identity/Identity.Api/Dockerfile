@@ -19,12 +19,12 @@ COPY ["Identity.Persistence.Database/Identity.Persistence.Database.csproj", "MOS
 RUN dotnet restore "MOSHIN.Commerce/src/Services/Identity/Identity.Api/Identity.Api.csproj"
 
 COPY . .
-#WORKDIR "/src/MOSHIN.Commerce/src/Services/Identity/Identity.Api"
+WORKDIR "/src/MOSHIN.Commerce/src/Services/Identity/Identity.Api"
 #WORKDIR "/src"
-#RUN dotnet build "MOSHIN.Commerce/src/Services/Identity/Identity.Api/Identity.Api.csproj" -c Release -o /app/build
+RUN dotnet build "Identity.Api.csproj" -c Release -o /app/build
 
-#FROM build AS publish
-RUN dotnet publish "src/MOSHIN.Commerce/src/Services/Identity/Identity.Api/Identity.Api.csproj" -c Release -o /app/publish
+FROM build AS publish
+RUN dotnet publish "MOSHIN.Commerce/src/Services/Identity/Identity.Api/Identity.Api.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
