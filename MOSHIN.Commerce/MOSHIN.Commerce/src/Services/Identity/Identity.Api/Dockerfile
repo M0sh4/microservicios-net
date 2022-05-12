@@ -24,7 +24,7 @@ COPY . .
 #RUN dotnet build "MOSHIN.Commerce/src/Services/Identity/Identity.Api/Identity.Api.csproj" -c Release -o /app/build
 
 #FROM build AS publish
-RUN dotnet publish "MOSHIN.Commerce/src/Services/Identity/Identity.Api/Identity.Api.csproj" -c Release -o /app/publish
+RUN dotnet publish "src/MOSHIN.Commerce/src/Services/Identity/Identity.Api/Identity.Api.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
