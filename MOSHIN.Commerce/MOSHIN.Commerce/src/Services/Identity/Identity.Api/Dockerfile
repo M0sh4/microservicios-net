@@ -24,8 +24,7 @@ COPY . .
 #RUN dotnet build "MOSHIN.Commerce/src/Services/Identity/Identity.Api/Identity.Api.csproj" -c Release -o /app/build
 
 #FROM build AS publish
-#RUN dotnet publish "MOSHIN.Commerce/src/Services/Identity/Identity.Api/Identity.Api.csproj" -c Release -o /app/publish
-RUN dotnet publish "MOSHIN.Commerce/src/Services/Identity/Identity.Api/Identity.Api.csproj" -c Release -r linux-musl-x64 -o /app --no-restore
+RUN dotnet publish "MOSHIN.Commerce/src/Services/Identity/Identity.Api/Identity.Api.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
